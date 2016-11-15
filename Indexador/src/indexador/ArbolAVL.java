@@ -12,18 +12,18 @@ package indexador;
 
 
 public class ArbolAVL<T extends Comparable<T>>{
-	
+	//raiz
     NodoAVL<T> raiz;
     
-   
+   //constructor
     public ArbolAVL() {
     	this.raiz = null;
 	}
-    
+    //devuelve la raiz
     public NodoAVL<T> getRaiz() {
 		return raiz;
 	}
-
+       //modifica a una nueva raiz
 	public void setRaiz(NodoAVL<T> raiz) {
 		this.raiz = raiz;
 	}
@@ -312,7 +312,7 @@ public class ArbolAVL<T extends Comparable<T>>{
 		return s;
 	}
 	
-	
+	//metodo de busqueda el cual ingresamos dato y raiz y nos devuelve el dato
 	public NodoAVL<T> buscar(T dato,NodoAVL<T> r){
         long start = System.currentTimeMillis(); //nos permite iniciar un conteo del tiempo de ejecucion del metodo
         if(r==null){
@@ -334,6 +334,7 @@ public class ArbolAVL<T extends Comparable<T>>{
         }
          
     }
+    //metodo para imprimir el preorden
         public void preOrden(){
         ayudantePreOrden(raiz);
     }
@@ -347,6 +348,7 @@ public class ArbolAVL<T extends Comparable<T>>{
         }
     }
 
+//prueba del arbol
      
         public static void main(String [] args){
             ArbolAVL a=new ArbolAVL();
